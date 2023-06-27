@@ -1,0 +1,234 @@
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family:Georgia, 'Times New Roman', Times, serif;
+	align-content: center;
+}
+
+body {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color: rgb(136, 241, 255);
+	background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+
+header {
+	padding: 1rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+.heading-container {
+	background-color: black;
+	text-align: center;
+	padding: 0.5rem 0.5rem;
+	border-radius: 0.5rem;
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.833);
+	margin: auto;
+}
+
+.form-container {
+	background-color:powderblue;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+	padding: 1rem;
+	padding-bottom: 3rem;
+	border-radius: 0.5rem;
+
+}  
+
+header h1{ 
+	text-align: top-left;
+	font-size: 2.5rem;
+	font-weight: 300;
+	color:rgb(136, 241, 255);
+	margin-bottom: 1rem;
+}
+
+#new-spend-input, #current-balance-input, #available-balance-input, #total-spend-input{
+	display:inline;
+}
+
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+#new-spend-input{
+	flex: 1 1 0%;
+	font-family: Arial, Helvetica, sans-serif;
+	align-items: center;
+	background-color:darkslategray;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	margin-right: 1rem;
+	margin-top: 2rem;
+	color:beige;
+	font-size: 1.25rem;
+}
+
+#spend-date, #spend-text{
+	flex: 1 1 0%;
+	align-items: center;
+	background-color:darkslategray ;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	margin-top: 1rem;
+	color:beige;
+	font-size: 1.25rem;
+}
+
+
+#current-balance-input, #available-balance-input{
+	flex: 1 1 0%;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color:darkslategray ;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	margin-right: 1rem;
+	margin-top: 2rem;
+	color:beige;
+	font-size: 1.25rem;
+}
+
+#total-spends{
+	flex: 1 1 0%;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color:darkslategray ;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	margin-right: 1rem;
+	margin-top: 1rem;
+	color:beige;
+	font-size: 1.25rem;
+}
+
+#new-spend-input::placeholder {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	color:beige;
+	opacity: 0.5 ;
+}
+
+#spend-text::placeholder, #spend-date::placeholder {
+	color:beige;
+	opacity: 0.5;
+}
+
+#current-balance-input::placeholder , #available-balance-input::placeholder, #total-spends::placeholder {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	color:beige;
+	opacity: 0.5;
+}
+
+#new-spend-submit, #calculatetotal {
+	color:black;
+	font-size: 1.1rem;
+	font-weight: 700;
+	background-color: rgb(36, 43, 45);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+#calculate:hover, #new-spend-submit:hover{
+	opacity: 0.8;
+}
+
+#calculate:active, #new-spend-submit:active{
+	opacity: 0.6;
+}
+
+
+main {
+	flex: 1 1 0%;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.spend-list {
+	padding: 0.5rem;
+}
+
+.spend-list h2 {
+	font-size: 2rem;
+	font-weight: 300;
+	text-align: center;
+	color:black;
+	margin-bottom: 1rem;
+}
+
+#spends .spend {
+	display: flex;
+	background-color:powderblue ;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+.spend .content {
+	flex: 1 1 0%;
+}
+
+.spend .content .number {
+	font-family: Arial, Helvetica, sans-serif;
+	color:black;
+	font-size: 1.125rem;
+	width: 100%;
+	display: inline-block;
+	transition: 0.4s;
+} 
+
+.spend .content .spend-text {
+	color:black;
+	font-size: 1.125rem;
+	width: 100%;
+	display: inline-block;
+	transition: 0.4s;
+} 
+
+.spend .content .spend-date {
+	font-family: Arial, Helvetica, sans-serif;
+	color:black;
+	font-size: 1.125rem;
+	width: 100%;
+	display: inline-block;
+	transition: 0.4s;
+} 
+
+.spend .content .number:not(:read-only) {
+	color:rgb(14, 156, 192);
+}
+
+.spend .actions {
+	display: flex;
+	margin: 0 -0.5rem;
+}
+
+.spend .actions button {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+.spend .actions button:hover {
+	opacity: 0.8;
+}
+
+.spend .actions button:active {
+	opacity: 0.6;
+}
+
+.spend .actions .delete {
+	color: rgb(230, 6, 50);
+}

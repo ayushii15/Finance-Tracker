@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Finance Tracker</title>
+
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<header>
+		<div class="heading-container">
+			<h1>Finance Tracker</h1>
+		</div>
+		<div class="form-container">
+			<form id="current-balance-form">
+				<input
+				   type="number"
+				   name="current-balance-input"
+				   id="current-balance-input"
+				   placeholder="Total Balance" />
+				<input 
+				   type="number" 
+				   name="available-balance-input" 
+				   id="available-balance-input" 
+				   placeholder="Available Balance" readonly />
+			</form>
+
+			<form id="new-spend-form">
+				<input 
+					type="number" 
+					name="new-spend-input" 
+					id="new-spend-input" 
+					placeholder="Money spent" />
+				<input 
+					type="text" 
+					name="spend-text" 
+					id="spend-text" 
+					placeholder="At" />   
+				<input 
+					type="date" 
+					name="spend-date" 
+					id="spend-date" 
+					placeholder="When" />   	 
+				<input 
+					type="submit"
+					id="new-spend-submit" 
+					value="Add Money" />
+			</form>
+
+			<input 
+				type="enter" 
+				id="total-spends"
+				placeholder="Total Spends" readonly>
+			<button id="calculatetotal">Calculate Total</button>
+		</div>
+	</header>
+
+	<main>
+		<section class="spend-list">
+			<h2>SPENDS</h2>
+
+			<div id="spends">
+			</div>
+		</section>
+	</main>
+	<script src="script.js"></script>
+</body>
+</html>
